@@ -20,7 +20,7 @@
 html,body{
     width: 100%;
     height: 100%;
-    background-color: #0b0b0b;
+    background-color: #151515;
 }
 
 #cursor{
@@ -114,7 +114,6 @@ html,body{
 #page1{
     min-height: 100vh;
     width: 100%;
-    background-color: #151515;
 }
 
 #nav{
@@ -152,10 +151,163 @@ html,body{
 
 #page1 #center-lines #line3 span{
     transition: all 0.5s;
+    text-decoration: underline #fff 0.5rem;
+    text-underline-offset: 0.7rem;
 }
 
 #page1 #center-lines #line3 span:hover{
     -webkit-text-stroke: 1px #fff;
     color: transparent;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#page2{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#page2 #video-container{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 26rem;
+    width: 55rem;
+}
+
+#page2 #video-container img{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#page2 #video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page2 #video-container #video-cursor{
+    position: absolute;
+    z-index: 3;
+    height: 7rem;
+    width: 7rem;
+    background-color: #ffa63d;
+    border-radius: 50%;
+    left: 70%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page2 #video-container #video-cursor i{
+    font-size: 1.5rem;
+}
+
+#page3{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#page4{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#page4 .main-heading{
+    text-align: center;
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#page4 .line{
+    width: 68%;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    left: 27%;
+}
+
+#page4 .main-content{
+    width: 68%;
+    position: relative;
+    left: 27%;
+    padding-top: 3rem;
+    font-size: 2rem;
+    width: 35%;
+}
+
+#page4 .info-container{
+    /* background-color: pink; */
+    display: flex;
+    gap: 2rem;
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+    margin-left: 5rem;
+}
+
+#page4 .info-container img{
+    height: 32rem;
+}
+
+#page4 .info-container .content{
+    width: 25.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#page4 .info-container .content p{
+    font-size: 1rem;
+}
+
+#page4 #floating-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50%;
+    transform: translateY(-10rem);
+    bottom: 300%;
+    height: fit-content;
+    padding: 2rem 3rem;
+    width: 35rem;
+    background-color: #3F7DF4;
+    z-index: 2;
+}
+
+#page4 #floating-card h2{
+    border-bottom: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page4 #floating-card h2 span:nth-child(1){
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 2rem 0;
+}
+
+#page4 #floating-card h2 span:nth-child(2){
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#page4 h3{
+    font-size: 1rem;
+    padding: 1rem 0;
+    position: relative;
+    left: 27%;
     font-weight: 500;
 }
