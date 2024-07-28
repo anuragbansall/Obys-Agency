@@ -14,6 +14,7 @@
     box-sizing: border-box;
     font-family: 'Gilroy';
     color: #fff;
+    user-select: none;
 }
 
 html,body{
@@ -22,7 +23,20 @@ html,body{
     background-color: #0b0b0b;
 }
 
+#cursor{
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid #dadada;
+    border-radius: 50%;
+    z-index: 999;
+    mix-blend-mode: difference;
+    /* transform: translate(-50%, -50%); */
+    display: none;
+}
+
 #loader{
+    display: none;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -98,7 +112,50 @@ html,body{
 }
 
 #page1{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #151515;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+}
+
+#nav-links{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#nav-links a{
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#page1 #center-lines{
+    width: fit-content;
+    margin: auto;
+}
+
+#page1 #center-lines .line{
+    overflow: hidden;
+}
+
+#page1 #center-lines .line h1{
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+#page1 #center-lines #line3 span{
+    transition: all 0.5s;
+}
+
+#page1 #center-lines #line3 span:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
 }

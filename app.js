@@ -1,5 +1,26 @@
-(function loader(){
-  let tl = gsap.timeline()
+
+// LocoMotive
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('#main'),
+  smooth: true
+});
+
+
+// GSAP
+let tl = gsap.timeline()
+
+// Cursor - GSAP
+{(function cursor(){
+  document.addEventListener("mousemove", e => {
+    gsap.to("#cursor", {
+      x: e.clientX,
+      y: e.clientY
+    })
+  })
+})()}
+
+// Loader - GSAP
+{(function loader(){
 
   tl.from("#loader .line h1", {
     y: 150,
@@ -16,7 +37,7 @@
         if(counter === 100){
           clearInterval(intervalId)
         }
-      }, 50);
+      }, 30);
     }
   })
 
@@ -29,11 +50,35 @@
     opacity: 0,
     display: "none",
     duration: 1,
-    delay: 4,
+    delay: 1.5,
   })
 
   tl.from("#page1", {
     y: 1200,
     opacity: 0
   })
-})()
+})}
+
+// Navbar - GSAP
+{(function navbar(){
+  tl.from("#nav svg, #nav a", {
+    y: -100,
+    opacity: 0,
+    stagger: 0.1
+  })
+})()}
+
+// Page1 - GSAP
+{(function page1(){
+  // let tl = gsap.timeline()
+
+  tl.from("#page1 #center-lines h1", {
+    y: 100,
+    stagger: 0.1
+  })
+})()}
+
+// Magnetic Effect Shery.js
+{(function magneticEffect(){
+  Shery.makeMagnet("#nav a");
+})()}
