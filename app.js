@@ -81,7 +81,7 @@ let tl = gsap.timeline()
     y: 1200,
     opacity: 0
   })
-})}
+})()}
 
 // Navbar - GSAP
 {(function navbar(){
@@ -161,6 +161,7 @@ let tl = gsap.timeline()
       gsap.to("#video-container #video-cursor", {
         scale: 0.5
       })
+      video.style.opacity = 1
       video.play()
       videoCursor.innerHTML = `<i class="fa-solid fa-pause"></i>`
     }else{
@@ -170,10 +171,32 @@ let tl = gsap.timeline()
       gsap.to("#video-container #video-cursor", {
         scale: 1
       })
+      video.style.opacity = 0
       video.pause()
       videoCursor.innerHTML = `<i class="fa-solid fa-play"></i>`
     }
   })
 })()}
 
-{/* <i class="fa-solid fa-play"></i> */}
+// Flag Animation Page1
+{(function flagAnime(){
+  const line3 = document.querySelector("#page1 #line3")
+  const flag = document.querySelector("#page1 #flag")
+  line3.addEventListener("mouseenter", function(){
+    gsap.to("#page1 #flag", {
+      opacity: 1
+    })
+    this.addEventListener("mousemove", function(e){
+      gsap.to("#page1 #flag", {
+        left: e.clientX-500,
+        y: e.clientY-350
+      })
+    })
+  })
+
+  line3.addEventListener("mouseleave", function(){
+    gsap.to("#page1 #flag", {
+      opacity: 0
+    })
+  })
+})()}
