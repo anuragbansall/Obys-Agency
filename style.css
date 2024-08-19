@@ -625,10 +625,10 @@ footer .copyright{
     }
     
     #page1 #center-lines .line h1{
-        font-size: 2rem;
+        font-size: 12vw;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
-        line-height: 3rem;
+        line-height: 4rem;
     }
     
     #page1 #center-lines #line3 span{
