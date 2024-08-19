@@ -100,6 +100,11 @@ let tl = gsap.timeline()
     y: 100,
     stagger: 0.1
   })
+
+  tl.from("#video-container", {
+    opacity: 0,
+    duration: 2
+  })
 })()}
 
 // Magnetic Effect Shery.js
